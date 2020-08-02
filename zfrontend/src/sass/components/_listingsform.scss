@@ -1,0 +1,112 @@
+.listingform {
+    width: 100%;
+    .row {
+        margin-bottom: 1rem !important;
+    }
+    &__section {
+        margin-bottom: 2rem;
+        padding: 0 1rem;
+    }
+    &__label {
+        font-size: 1.6rem;
+        color: $color-secondary;
+        &__checkbox {
+            display: block;
+            position: relative;
+            padding: 10px 0 10px 26px;
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 20px;
+                height: 20px;
+                border: 1px solid #aaa;
+                border-radius: 3px;
+                display: inline-block;
+            }
+
+            &::after {
+                content: "";
+                display: none;
+                position: absolute;
+                left: 7px;
+                top: 11px;
+                width: 6px;
+                height: 10px;
+                border: solid $color-primary;
+                border-width: 0 2px 2px 0;
+                transform: rotate(45deg);
+            }
+        }
+    }
+    &__checkbox {
+        display: none;
+        &:checked + .listingform__label__checkbox {
+            &::after {
+              display: block;
+            }
+            
+            &::before {
+              background: #3498db;
+              border-color: #3498db;
+            }
+          }
+    }
+
+    &__input {
+        margin-bottom: 2rem;
+        padding: 0 1rem;
+        margin-top: 0.5rem;
+        padding: 0.8rem;
+        // box-shadow: 0 0.3rem 0.2rem rgb(232, 240, 254);
+        border: 0.1rem solid lightgray;
+        box-shadow: none;
+        &::placeholder {
+            font-size: 1.2rem;
+        }
+    }
+
+    &__select {
+        // &:select{
+        //     border: none;
+        // }
+        font-size: 1.2rem;
+        padding: 0.8rem;
+        font-family: cursive;
+        width: 100%;
+        box-shadow: 0 0.3rem 0.2rem rgb(232, 240, 254);
+        border: 0.1rem solid lightgray;
+        margin-top: 0.5rem;
+        border-radius: 0.4rem;
+        // font-weight: 200;
+        &::before {
+            width: 80%;
+            content: "..";
+        }
+    }
+
+    &__button {
+        color: $color-white;
+        background-color: rgba($color-primary, 0.8);
+        font-size: 2rem;
+        // border: 0.1rem solid rgba($color-primary, 0.5);
+        border: none;
+        box-shadow: 0 0.3rem 0.2rem rgba($color-primary, 0.2);
+        cursor: pointer;
+
+        padding: 1rem 2rem;
+        font-family: cursive;
+        border-radius: 0.4rem;
+        // align-items: center;
+        // margin-top: 10rem;
+        // float: right;
+        align-items: flex-end;
+        &:hover {
+            color: $color-quaternary;
+            background-color: $color-white;
+            border: 0.1rem solid $color-quaternary;
+        }
+    }
+}

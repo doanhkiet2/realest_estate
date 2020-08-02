@@ -1,0 +1,6 @@
+{
+    "python.linting.mypyEnabled": false,
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true,
+    "python.pythonPath": "d:\\back\\destop\\practice_house\\phvenv\\Scripts\\python.exe"
+}

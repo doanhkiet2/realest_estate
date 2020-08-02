@@ -1,0 +1,13 @@
+.alert {
+    display: table;
+    width: 100%;
+    padding: 1rem 1rem;
+    font-size: 1.6rem;
+    color: whitesmoke;
+    &--error{
+        background-color: rgba(red,0.6);
+    }
+    &--success{
+        background-color: rgba(blue,0.6);
+    }
+}

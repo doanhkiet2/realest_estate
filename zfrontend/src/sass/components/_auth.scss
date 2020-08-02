@@ -1,0 +1,83 @@
+.auth {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 8rem;
+    &__title {
+        font-size: 3.6rem;
+        color: $color-primary;
+    }
+    &__lead {
+        font-size: 2.4rem;
+        margin-top: 2rem;
+        @include respond(phone) {
+            margin-top: 1rem;
+        }
+    }
+    &__form {
+        @include respond(phone) {
+            margin-top: 1rem;
+        }
+        margin-top: 2rem;
+        // width: 100%;
+        min-width: 50%;
+
+        &__group {
+            margin-bottom: 1rem !important;
+            padding-bottom: 1.6rem;
+        }
+        &__label {
+            display: block;
+            font-size: 1.6rem;
+            margin-bottom: 0.5rem;
+        }
+        &__input {
+            width: 100%;
+            padding: 1.6rem 2rem;
+            font-size: 1.6rem;
+            caret-color: $color-primary;
+            color: $color-tertiary;
+        }
+        &__button {
+            margin-top: 1rem;
+            font-family: cursive;
+            font-size: 1.8rem;
+            padding: 1rem 0;
+            width: 80%;
+            margin-left: 10%;
+            background-color: $color-white;
+            color: $color-primary;
+            border: 0.1rem solid rgba($color-primary, 0.4);
+            border-radius: 0.4rem;
+            cursor: pointer;
+            box-shadow: 0 0.3rem 0.2rem rgb(232, 240, 254);
+
+            // outline: none;
+
+            &:hover {
+                color: $color-black;
+                background-color: rgba($color-secondary, 0.2);
+                box-shadow: none;
+            }
+        }
+    }
+    &__authhint {
+        font-size: 1.6rem;
+        margin-top: 6rem;
+        @include respond(phone) {
+            margin-top: 3rem;
+        }
+        &__link {
+            text-decoration: none;
+            color: yellowgreen;
+            font-size: 1.8rem;
+            transition: 0.5s;
+            &:hover {
+                color: $color-quaternary;
+                font-size: 1.9rem;
+            }
+        }
+    }
+}

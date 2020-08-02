@@ -1,0 +1,74 @@
+.contact {
+    width: 100%;
+    margin-bottom: 6rem;
+    &__header {
+        margin-top: 8rem;
+        text-align: center;
+        @include respond(tab-port) {
+            margin-top: 4rem;
+        }
+    }
+    &__form {
+        ::placeholder{
+            font-size: 1.2rem;
+        }
+                display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+        margin-left: 20%;
+        margin-right: 20%;
+        margin-bottom: 4rem;
+        @include respond(tab-port) {
+            margin-top: 1.6rem;
+            margin-bottom: 6rem;
+        }
+        &__label{
+            font-size: 1.6rem;
+            margin-bottom: 0.4rem;
+            color: $color-primary;
+        }
+
+
+        &__area {
+            padding: 1.5rem;
+            font-size: 1.6rem;
+            caret-color: $color-primary;
+            margin-bottom: 2rem;
+            resize: none;
+        }
+
+        &__input {
+            resize: none;
+            padding: 1.5rem;
+            font-size: 1.6rem;
+            caret-color: $color-primary;
+            margin-bottom: 1.2rem;
+        }
+
+        &__button {
+            padding: 1rem 2rem;
+            font-size: 1.8rem;
+            outline: none;
+            background-color: $color-primary;
+            color: $color-white;
+            margin-left: 20%;
+            margin-right: 20%;
+            font-family: cursive;
+            border: none;
+            border-radius: 0.2rem;
+            box-shadow: 0 0.3rem 0.2rem rgba(47, 36, 78, 0.1);
+            transition: 0.5s;
+            cursor: pointer;
+            &:hover {
+                background-color: $color-tertiary;
+                color: $color-white;
+                box-shadow: 0 0.3rem 0.2rem rgba(36, 78, 69, 0.1);
+            }
+        }
+        &__loader{
+            display: flex;
+            justify-content: center;
+            align-items: center;;
+        }
+    }
+}
